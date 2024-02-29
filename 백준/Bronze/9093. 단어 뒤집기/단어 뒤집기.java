@@ -4,18 +4,24 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken());
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int N = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine());
-            StringBuilder result = new StringBuilder();
-            while (st.hasMoreTokens()) {
-                StringBuilder temp = new StringBuilder(st.nextToken());
-                temp.reverse();
-                result.append(temp).append(" ");
+        while (N -- > 0) {
+            Stack<Character> stack = new Stack<>();
+            String input = br.readLine()+ " ";
+            for (char alphabet : input.toCharArray()) {
+                if (alphabet != ' ') {
+                    stack.push(alphabet);
+                } else {
+                    while (!stack.isEmpty()) {
+                        bw.write(stack.pop());
+                    }
+                    bw.write(' ');
+                }
             }
-            System.out.println(result);
+            bw.write("\n");
         }
+        bw.flush();
     }
 }
