@@ -19,10 +19,8 @@ public class Main {
 
         Stack<Integer> stack = new Stack<Integer>();
         for (int i = 0; i < num; i++) {
-            if (!stack.isEmpty()) {
-                while (!stack.isEmpty() && count[seq[stack.peek()]] < count[seq[i]]) {
-                    seq[stack.pop()] = seq[i];
-                }
+            while (!stack.isEmpty() && count[seq[stack.peek()]] < count[seq[i]]) {
+                seq[stack.pop()] = seq[i];
             }
             stack.push(i);
         }
