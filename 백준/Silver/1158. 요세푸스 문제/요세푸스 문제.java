@@ -1,32 +1,39 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        StringBuilder sb = new StringBuilder();
 
-        int N = Integer.parseInt(st.nextToken());
-        int K = Integer.parseInt(st.nextToken());
-        Queue<Integer> line = new LinkedList<Integer>();
-        for (int i = 1; i <= N; i++) {
-            line.add(i);
+public class Main {
+    private static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    private static final StringBuilder sb = new StringBuilder();
+
+    public static void main(String[] args) throws IOException {
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken());
+        int k = Integer.parseInt(st.nextToken());
+        List<Integer> result = new ArrayList<>();
+        Queue<Integer> queue = new ArrayDeque();
+        for (int i = 1; i <= n; i++) {
+            queue.add(i);
+        }
+
+        while (!queue.isEmpty()) {
+            for (int i = 1; i < k; i++) {
+                Integer a = queue.poll();
+                queue.add(a);
+            }
+            Integer b = queue.poll();
+            result.add(b);
         }
 
         sb.append("<");
-        //Queue가 하나 남을때 까지 반복한다.
-        while (line.size() > 1) {
-            //K - 1번 만큼 맨앞 숫자를 맨뒤로 보낸다.
-            for (int i = 0; i < K - 1; i++) {
-                int value = line.poll();
-                line.add(value);
+        for (int i = 0; i < result.size(); i++) {
+            if (i != result.size() - 1) {
+                sb.append(result.get(i) + ", ");
+            } else {
+                sb.append(result.get(i)+">");
             }
-            //K 번째 숫자는 빼서 순열에 더한다.
-            sb.append(line.poll()).append(", ");
         }
-        //Queue의 마지막 숫자는 , 없이 넣고 > 닫아준다.
-        sb.append(line.poll()).append(">");
-        System.out.println(sb);
+        System.out.println(sb.toString());
     }
 }
+
