@@ -1,23 +1,19 @@
 import java.io.*;
 
 public class Main {
+
     private static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    private static final int MOD = 10007;;
 
     public static void main(String[] args) throws IOException {
         int n = Integer.parseInt(br.readLine());
-        if (n < 3) {
-            System.out.println(n);
-            return;
-        }
+        long[] dp = new long[10001];
 
-        long[] count = new long[n + 1];
-        count[0] = 0;
-        count[1] = 1;
-        count[2] = 2;
-
+        dp[1] = 1;
+        dp[2] = 2;
         for (int i = 3; i <= n; i++) {
-            count[i] = (count[i - 1] + count[i - 2]) % 10007;
+            dp[i] = (dp[i-1] + dp[i-2]) % MOD;
         }
-        System.out.println(count[n]);
+        System.out.println(dp[n]);
     }
 }
