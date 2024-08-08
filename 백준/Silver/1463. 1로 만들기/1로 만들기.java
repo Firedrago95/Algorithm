@@ -1,24 +1,23 @@
 import java.io.*;
-import java.util.*;
-
 
 public class Main {
+
     private static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws IOException {
-        int x = Integer.parseInt(br.readLine());
-        int[] result = new int[x+1];
-        result[0] = result[1] = 0;
-        for (int i = 2; i < result.length; i++) {
-            result[i] = result[i - 1] + 1;
-            if (i % 2 == 0) {
-                result[i] = Math.min(result[i] , result[i / 2] + 1);
-            }
+        int n = Integer.parseInt(br.readLine());
+        int[] dp = new int[n + 1];
+
+        dp[1] = 0;
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i-1] + 1;
             if (i % 3 == 0) {
-                result[i] = Math.min(result[i], result[i / 3] + 1);
+                dp[i] = Math.min(dp[i / 3] + 1, dp[i]);
+            }
+            if (i % 2 == 0) {
+                dp[i] = Math.min(dp[i / 2] + 1, dp[i]);
             }
         }
-        System.out.println(result[x]);
+        System.out.println(dp[n]);
     }
 }
-
