@@ -1,22 +1,17 @@
+import java.util.*;
 class Solution {
     public int solution(int[] wallet, int[] bill) {
         int answer = 0;
-        int minBill = Math.min(bill[0], bill[1]);
-        int minWallet = Math.min(wallet[0], wallet[1]);
-        int maxBill = Math.max(bill[0], bill[1]);
-        int maxWallet = Math.max(wallet[0], wallet[1]);
-        while (minBill > minWallet || maxBill > maxWallet) {
-            if (bill[0] > bill[1]) {
-                bill[0] /= 2;
-            } else if (bill[1] > bill[0]) {
-                bill[1] /= 2;
-            }
+        while(needFolding(wallet, bill)) {
+            bill[1] /= 2;
             answer++;
-            minBill = Math.min(bill[0], bill[1]);
-            minWallet = Math.min(wallet[0], wallet[1]);
-            maxBill = Math.max(bill[0], bill[1]);
-            maxWallet = Math.max(wallet[0], wallet[1]);
         }
         return answer;
+    }
+    
+    private boolean needFolding(int[] wallet, int[] bill) {
+        Arrays.sort(wallet);
+        Arrays.sort(bill);
+        return bill[0] > wallet[0] || bill[1] > wallet[1];
     }
 }
