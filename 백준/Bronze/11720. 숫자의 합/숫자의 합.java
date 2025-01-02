@@ -1,14 +1,14 @@
-import java.util.Scanner;
-public class Main{
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        String numbers = sc.next();
-        char[] cNumbers = numbers.toCharArray();
-        int sum = 0;
-        for (int i=0; i< cNumbers.length; i++) {
-            sum += cNumbers[i] - '0';
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        char[] nums = br.readLine().toCharArray();
+        int answer = 0;
+        for (char num : nums) {
+            answer += (num - '0');
         }
-        System.out.println(sum);
+        System.out.println(answer);
     }
 }
