@@ -1,30 +1,26 @@
-import java.io.*;
 import java.util.*;
-
-class Main {
-	public static void main(String[] args) throws IOException {
+import java.io.*;
+public class Main {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-		int n = Integer.parseInt(st.nextToken());
-        
-        int s = 1;
-        int e = 1;
-        long sum = 1;
+        int n = Integer.parseInt(br.readLine());
         int count = 1;
-        
-        while (e != n) {
-            if (sum < n) {
-                e++;
-                sum += e;
-            } else if (sum == n) {
-                e++;
-                sum += e;
+        int sum = 1;
+        int startIndex = 1;
+        int endIndex = 1;
+        while (endIndex != n) {
+            if (sum == n) {
                 count++;
+                endIndex++;
+                sum += endIndex;
             } else if (sum > n) {
-                sum -= s;
-                s++;
+                sum -= startIndex;
+                startIndex++;
+            } else {
+               endIndex++;
+               sum += endIndex;
             }
         }
         System.out.println(count);
-	}
+    }
 }
