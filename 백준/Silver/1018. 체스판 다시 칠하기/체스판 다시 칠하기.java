@@ -1,50 +1,49 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-import java.io.IOException;
+import java.io.*;
 
 public class Main {
-
-    public static boolean[][] arr;
-    public static int min = 64;
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
-        arr = new boolean[N][M];
-        for (int i = 0; i < N; i++) {
-            String str = br.readLine();
-            for (int j = 0; j < M; j++) {
-                if (str.charAt(j) == 'W') {
-                    arr[i][j] = true;
-                } else {
-                    arr[i][j] = false;		
-                }
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        String[] split = br.readLine().split(" ");
+        int n = Integer.parseInt(split[0]);
+        int m = Integer.parseInt(split[1]);
+        char[][] board = new char[n][m];
+        for (int i = 0; i < n; i++) {
+            String stringArray = br.readLine();
+            for (int j = 0; j < m; j++) {
+                board[i][j] = stringArray.charAt(j);
             }
         }
-        for (int i = 0; i < N- 7; i++) {
-            for (int j = 0; j < M - 7; j++) {
-                find(i, j);
+
+        int min = 64;
+        for (int i = 0; i < n - 7; i++) {
+            for (int j = 0; j < m - 7; j++) {
+                min = Math.min(min, getMin(i, j , board));
             }
         }
-        System.out.println(min);
+        bw.write(min + "");
+        br.close();
+        bw.close();
     }
 
-    public static void find(int x, int y) {
+    private static int getMin(int i, int j, char[][] board) {
         int count = 0;
-        boolean TF = arr[x][y];
-        for (int i = x; i < x + 8; i++) {
-            for (int j = y; j < y + 8; j++) {
-                if (arr[i][j] != TF) {
+        char c = board[i][j];
+        for (int k = i; k < i + 8; k++) {
+            for (int l = j; l < j + 8; l++) {
+                if (board[k][l] != c) {
                     count++;
                 }
-                TF = (!TF);
+                c = changeBoard(c);
             }
-            TF = !TF;
+            c = changeBoard(c);
         }
-        count = Math.min(count, 64 - count);
-        min = Math.min(min, count);
+        return Math.min(count, 64 - count);
+    }
+
+    private static char changeBoard(char c) {
+        if (c == 'W') return 'B';
+        return 'W';
     }
 }
