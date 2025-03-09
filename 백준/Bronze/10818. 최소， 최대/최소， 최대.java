@@ -1,21 +1,24 @@
-import java.util.*;
 import java.io.*;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringBuilder sb;
 
         int n = Integer.parseInt(br.readLine());
-        String[] s = br.readLine().split(" ");
-        List<Integer> numbers = Arrays.stream(s)
-            .map(Integer::parseInt)
-            .collect(Collectors.toList());
+        String[] numbers = br.readLine().split(" ");
+        int min = 1000000;
+        int max = -1000000;
 
-        int min = numbers.stream().mapToInt(Integer::valueOf).min().getAsInt();
-        int max = numbers.stream().mapToInt(Integer::valueOf).max().getAsInt();
+        for (String number : numbers) {
+            int num = Integer.parseInt(number);
+            if (num < min) {
+                min = num;
+            }
+            if (num > max) {
+                max = num;
+            }
+        }
 
         bw.write(min + " " + max);
         br.close();
