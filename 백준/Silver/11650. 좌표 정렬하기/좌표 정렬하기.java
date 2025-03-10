@@ -1,29 +1,48 @@
-import java.io.*;
 import java.util.*;
+import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        StringBuilder sb = new StringBuilder();
-        int N = Integer.parseInt(st.nextToken());
-        int[][] a = new int[N][2];
-        for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine());
-            a[i][0] = Integer.parseInt(st.nextToken());
-            a[i][1] = Integer.parseInt(st.nextToken());
-        }
-        Arrays.sort(a,(e1, e2) -> {
-            if (e1[0] == e2[0]) {
-                return e1[1] - e2[1];
-            } else {
-                return e1[0] - e2[0];
-            }
-        });
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        for (int i = 0; i < N; i++) {
-            sb.append(a[i][0] + " " + a[i][1] +"\n");
+        int n = Integer.parseInt(br.readLine());
+        List<Point> members = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            String[] input = br.readLine().split(" ");
+            members.add(new Point(Integer.parseInt(input[0]), Integer.parseInt(input[1])));
         }
-        System.out.println(sb);
+
+        Collections.sort(members);
+
+        for (Point member : members) {
+            bw.write(member.toString());
+        }
+
+        br.close();
+        bw.close();
+    }
+}
+
+class Point implements Comparable<Point> {
+    private int x;
+    private int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override
+    public int compareTo(Point o) {
+        if (this.x == o.x) {
+            return this.y - o.y;
+        }
+        return this.x - o.x;
+    }
+
+    @Override
+    public String toString() {
+        return x + " " + y + "\n";
     }
 }
