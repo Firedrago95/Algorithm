@@ -1,26 +1,20 @@
-import java.io.*;
 import java.util.*;
+import java.io.*;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        int[] a = new int[N];
-        for (int i = 0; i < N; i++) {
-            a[i] = Integer.parseInt(br.readLine());
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.parseInt(sc.next());
+        int[] result = new int[n];
+
+        for (int i = 0; i < result.length; i++) {
+            result[i] = Integer.parseInt(sc.next());
         }
 
-        for (int i = 0; i < N-1; i++) {
-            for (int j = 0; j < N - 1 - i; j++) {
-                if (a[j] > a[j + 1]) {
-                    int tmp = a[j];
-                    a[j] = a[j + 1];
-                    a[j+1] = tmp;
-                }
-            }
-        }
+        Arrays.sort(result);
 
-        for (int i : a) {
+        for (int i : result) {
             System.out.println(i);
         }
     }
