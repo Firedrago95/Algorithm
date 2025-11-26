@@ -1,25 +1,24 @@
 import java.util.*;
 import java.io.*;
+import java.util.stream.Collectors;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int n = Integer.parseInt(br.readLine());
-        String[] str = br.readLine().split(" ");
+        double result = 0;
 
-        int max = 0;
-        int sum = 0;
-        for(int i = 0; i<n; i++){
-            int cur = Integer.parseInt(str[i]);
-            sum += cur;
-            max = max < cur ? cur : max;
+        List<Integer> nums = Arrays.stream(br.readLine().split(" "))
+                .map(Integer::parseInt)
+                .sorted()
+                .collect(Collectors.toList());
+
+        for (int i = 0; i < nums.size(); i++) {
+            result +=(double) nums.get(i) / nums.get(nums.size() - 1) * 100;
         }
 
-        float rate = 100 / (float)max;
-        bw.write(sum * rate / n + "");
-        br.close();
-        bw.close();
+        System.out.println(result / n);
     }
 }
