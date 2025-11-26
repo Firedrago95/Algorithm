@@ -8,17 +8,17 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
-        double result = 0;
-
         List<Integer> nums = Arrays.stream(br.readLine().split(" "))
                 .map(Integer::parseInt)
-                .sorted()
                 .collect(Collectors.toList());
+        long sum = 0;
+        long max = 0;
 
-        for (int i = 0; i < nums.size(); i++) {
-            result +=(double) nums.get(i) / nums.get(nums.size() - 1) * 100;
+        for (int num : nums) {
+            if (max < num) max = num;
+            sum += num;
         }
 
-        System.out.println(result / n);
+        System.out.println(sum * 100.0 / max / n);
     }
 }
