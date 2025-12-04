@@ -2,20 +2,30 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-        int n = Integer.parseInt(sc.next());
-        int[] result = new int[n];
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < result.length; i++) {
-            result[i] = Integer.parseInt(sc.next());
+        int n = Integer.parseInt(br.readLine());
+
+        int[] arr = new int[n];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(br.readLine());
         }
 
-        Arrays.sort(result);
-
-        for (int i : result) {
-            System.out.println(i);
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i]  > arr[j]) {
+                    int tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
         }
+
+        for (int i : arr) {
+            sb.append(i).append("\n");
+        }
+        System.out.println(sb);
     }
 }
