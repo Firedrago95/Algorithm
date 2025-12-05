@@ -20,6 +20,8 @@ public class Main {
                     int tmp = arr[j];
                     arr[j] = arr[j - 1];
                     arr[j-1] = tmp;
+                } else {
+                    break;
                 }
             }
         }
