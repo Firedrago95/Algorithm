@@ -4,21 +4,20 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
+        StringBuilder sb = new StringBuilder();
+        
         int n = Integer.parseInt(br.readLine());
-        int[] nums = new int[n];
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = Integer.parseInt(br.readLine());
+
+        int[] arr = new int[n];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(br.readLine());
         }
 
-        Arrays.sort(nums);
+        Arrays.sort(arr);
 
-        for (int num : nums) {
-            bw.write(num + "\n");
+        for (int i : arr) {
+            sb.append(i).append("\n");
         }
-
-        br.close();
-        bw.close();
+        System.out.println(sb);
     }
 }
