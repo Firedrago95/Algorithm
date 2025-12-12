@@ -5,47 +5,33 @@ public class Main {
 
     static int N;
 
-    static class Meeting implements Comparable<Meeting>{
-        private int start;
-        private int end;
-
-        public Meeting(int start, int end) {
-            this.start = start;
-            this.end = end;
-        }
-
-        @Override
-        public int compareTo(Meeting o) {
-            if (this.end != o.end) {
-                return this.end - o.end;
-            } else {
-                return this.start - o.start;
-            }
-        }
-    }
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         N = Integer.parseInt(st.nextToken());
 
-        Meeting[] meetings = new Meeting[N];
+        int[][] times = new int[N][2];
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
-            int start = Integer.parseInt(st.nextToken());
-            int end = Integer.parseInt(st.nextToken());
-            meetings[i] = new Meeting(start, end);
+            times[i][0] = Integer.parseInt(st.nextToken());
+            times[i][1] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(meetings);
+        Arrays.sort(times, (o1, o2) -> {
+            if (o1[1] == o2[1]) {
+                return o1[0] - o2[0];
+            }
+            return o1[1] - o2[1];
+        });
+
 
         int prevEndTime = -1;
         int result = 0;
-        for (Meeting meeting : meetings) {
-            if (meeting.start >= prevEndTime) {
+        for (int[] time : times) {
+            if (time[0] >= prevEndTime) {
                 result++;
-                prevEndTime = meeting.end;
+                prevEndTime = time[1];
             }
         }
 
