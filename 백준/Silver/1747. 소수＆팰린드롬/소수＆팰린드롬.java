@@ -10,8 +10,8 @@ public class Main {
         int n = Integer.parseInt(st.nextToken());
 
         while (true) {
-            if (isPrime(n)) {
-                if (isPalindrome(n)) {
+            if (isPalindrome(n)) {
+                if (isPrime(n)) {
                     System.out.println(n);
                     break;
                 }
@@ -32,17 +32,14 @@ public class Main {
     }
 
     private static boolean isPalindrome(int n) {
-        String s = String.valueOf(n);
-        int left = 0;
-        int right = s.length() -1;
-
-        while (left < right) {
-            if (s.charAt(left) != s.charAt(right)) {
-                return false;
-            }
-            left++;
-            right--;
+        int original = n;
+        int reversed = 0;
+        
+        while (n > 0) {
+            int digit = n % 10;
+            reversed = reversed * 10 + digit;
+            n /= 10;
         }
-        return true;
+        return original == reversed;
     }
 }
