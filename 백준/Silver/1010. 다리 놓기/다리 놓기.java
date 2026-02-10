@@ -12,6 +12,17 @@ public class Main {
         sb = new StringBuilder();
         st = new StringTokenizer(br.readLine());
 
+        for (int i = 0; i < 30; i++) {
+            dp[i][i] = 1;
+            dp[i][0] = 1;
+        }
+
+        for (int i = 2; i < 30; i++) {
+            for (int j = 1; j < i; j++) {
+                dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
+            }
+        }
+
         int T = Integer.parseInt(st.nextToken());
         while(T-- > 0) {
             st = new StringTokenizer(br.readLine());
@@ -19,16 +30,8 @@ public class Main {
             int N = Integer.parseInt(st.nextToken());
             int M = Integer.parseInt(st.nextToken());
 
-            System.out.println(combination(M ,N));
+            System.out.println(dp[M][N]);
         }
     }
 
-    private static long combination(int m, int n) {
-        if (m == n) return 1;
-        if (n == 1) return m;
-
-        if (dp[m][n] > 0) return dp[m][n];
-
-        return dp[m][n] = combination(m - 1, n - 1) + combination(m - 1, n);
-    }
 }
