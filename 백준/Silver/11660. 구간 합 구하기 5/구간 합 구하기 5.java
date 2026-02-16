@@ -1,37 +1,39 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Main {
 
+    static BufferedReader br;
+    static StringTokenizer st;
+    static StringBuilder sb;
+
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        br = new BufferedReader(new InputStreamReader(System.in));
+        st = new StringTokenizer(br.readLine());
+        sb = new StringBuilder();
 
         int n = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
+        int q = Integer.parseInt(st.nextToken());
 
-        int[][] a = new int[n + 1][n + 1];
+        int[][] arr = new int[n + 1][n + 1];
+        int[][] sum = new int[n + 1][n + 1];
+
         for (int i = 1; i <= n; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 1; j <= n; j++) {
-                a[i][j] = Integer.parseInt(st.nextToken());
+                arr[i][j] = Integer.parseInt(st.nextToken());
+                sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
             }
         }
 
-        int[][] s = new int[n + 1][n + 1];
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {
-                s[i][j] = s[i-1][j] + s[i][j-1] - s[i-1][j-1] + a[i][j];
-            }
-        }
-
-        for (int i = 0; i < m; i++) {
+        while (q-- > 0) {
             st = new StringTokenizer(br.readLine());
             int x1 = Integer.parseInt(st.nextToken());
             int y1 = Integer.parseInt(st.nextToken());
             int x2 = Integer.parseInt(st.nextToken());
             int y2 = Integer.parseInt(st.nextToken());
-            System.out.println(s[x2][y2] - s[x2][y1 - 1] - s[x1 - 1][y2] + s[x1 - 1][y1 - 1]);
+            sb.append(sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 - 1]).append("\n");
         }
+        System.out.println(sb);
     }
 }
