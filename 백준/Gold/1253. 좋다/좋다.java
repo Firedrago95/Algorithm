@@ -1,52 +1,45 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Main {
 
+    static BufferedReader br;
+    static StringTokenizer st;
+    static StringBuilder sb;
+
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        
-        int n = Integer.parseInt(br.readLine());
-        
-        if (n < 3) {
-            System.out.println(0);
-            return;
-        }
-        
-        int[] arr = new int[n];
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        br = new BufferedReader(new InputStreamReader(System.in));
+        st = new StringTokenizer(br.readLine());
+        sb = new StringBuilder();
+
+        int n = Integer.parseInt(st.nextToken());
+        int[] a = new int[n];
+        st = new StringTokenizer(br.readLine());
         for (int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
+            a[i] = Integer.parseInt(st.nextToken());
         }
-        
-        Arrays.sort(arr);
 
-        int count = 0;
-        
-        for (int i = 0; i < n; i++) {
-            int target = arr[i];
-            int start = 0;
-            int end = n - 1;
-            
-            while (start < end) {
-                if (start == i) {
-                    start++;
-                    continue;
-                }
-                if (end == i) {
-                    end--;
-                    continue;
-                }
+        Arrays.sort(a);
 
-                long sum = arr[start] + arr[end];
+        long count = 0;
+        for (int k = 0; k < n; k++) {
+            int right = a.length - 1;
+            int left = 0;
 
-                if (sum == target) {
-                    count++;
-                    break;
-                } else if (sum < target) {
-                    start++;
+            while (left < right) {
+                if (a[left] + a[right] == a[k]) {
+                    if (left != k && right != k) {
+                        count++;
+                        break;
+                    } else if (left == k) {
+                        left++;
+                    } else if (right == k) {
+                        right--;
+                    }
+                } else if (a[left] + a[right] < a[k]) {
+                    left++;
                 } else {
-                    end--;
+                    right--;
                 }
             }
         }
