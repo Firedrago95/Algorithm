@@ -1,35 +1,48 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        StringBuilder sb = new StringBuilder();
 
-        int n = Integer.parseInt(st.nextToken());
-        int lastPushed = 0;
+    static BufferedReader br;
+    static StringBuilder sb;
+
+    public static void main(String[] args) throws IOException {
+        br = new BufferedReader(new InputStreamReader(System.in));
+        sb = new StringBuilder();
+
+        int n = Integer.parseInt(br.readLine());
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = Integer.parseInt(br.readLine());
+        }
+
         Stack<Integer> stack = new Stack<>();
 
-        for (int i = 0; i < n; i++) {
-            st = new StringTokenizer(br.readLine());
-            int target = Integer.parseInt(st.nextToken());
-
-            if (target > lastPushed) {
-                for (int j = lastPushed + 1; j < target + 1; j++) {
-                    stack.push(j);
+        int num = 1;
+        boolean result = true;
+        for (int i = 0; i < a.length; i++) {
+            int target = a[i];
+            if (num <= target) {
+                while (num <= target) {
+                    stack.push(num++);
                     sb.append("+\n");
                 }
-                lastPushed = target;
+                stack.pop();
+                sb.append("-\n");
+            } else {
+                int top = stack.pop();
+
+                if (top > target) {
+                    System.out.println("NO");
+                    result = false;
+                    break;
+                } else {
+                    sb.append("-\n");
+                }
             }
-            else if (stack.peek() != target) {
-                System.out.println("NO");
-                return;
-            }
-            
-            stack.pop();
-            sb.append("-\n");
         }
-        System.out.println(sb);
+        if (result) {
+            System.out.println(sb);
+        }
     }
 }
