@@ -1,63 +1,92 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Main {
 
-    private static int[] checkCounts = new int[4];
-    private static int[] currentCounts = new int[4];
-    private static int count = 0;
+    static BufferedReader br;
+    static StringTokenizer st;
+    static StringBuilder sb;
+    static int[] checkArr;
+    static int[] myArr;
+    static int checkSecret;
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        br = new BufferedReader(new InputStreamReader(System.in));
+        st = new StringTokenizer(br.readLine());
+        sb = new StringBuilder();
 
         int s = Integer.parseInt(st.nextToken());
         int p = Integer.parseInt(st.nextToken());
 
-        st = new StringTokenizer(br.readLine());
-        String dna = st.nextToken();
+        char[] a = br.readLine().toCharArray();
+        checkArr = new int[4];
+        myArr = new int[4];
+        checkSecret = 0;
+        int result = 0;
 
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < 4; i++) {
-            checkCounts[i] = Integer.parseInt(st.nextToken());
+            checkArr[i] = Integer.parseInt(st.nextToken());
+            if (checkArr[i] == 0) checkSecret++;
         }
 
         for (int i = 0; i < p; i++) {
-            add(dna.charAt(i));
+            add(a[i]);
         }
 
-        check();
-
-        for (int start = 1; start <= s - p; start++) {
-            remove(dna.charAt(start - 1));
-            add(dna.charAt(start + p - 1));
-
-            check();
+        if (checkSecret == 4) {
+            result++;
         }
 
-        System.out.println(count);
+        for (int i = p; i < s; i++) {
+            int j = i - p;
+            add(a[i]);
+            remove(a[j]);
+            if (checkSecret == 4) result++;
+        }
+
+        System.out.println(result);
     }
 
     private static void add(char c) {
-        if (c == 'A') currentCounts[0]++;
-        if (c == 'C') currentCounts[1]++;
-        if (c == 'G') currentCounts[2]++;
-        if (c == 'T') currentCounts[3]++;
+        switch (c) {
+            case 'A' :
+                myArr[0]++;
+                if (myArr[0] == checkArr[0]) checkSecret++;
+                break;
+            case 'C' :
+                myArr[1]++;
+                if (myArr[1] == checkArr[1]) checkSecret++;
+                break;
+            case 'G' :
+                myArr[2]++;
+                if (myArr[2] == checkArr[2]) checkSecret++;
+                break;
+            case 'T' :
+                myArr[3]++;
+                if (myArr[3] == checkArr[3]) checkSecret++;
+                break;
+        }
     }
 
     private static void remove(char c) {
-        if (c == 'A') currentCounts[0]--;
-        if (c == 'C') currentCounts[1]--;
-        if (c == 'G') currentCounts[2]--;
-        if (c == 'T') currentCounts[3]--;
-    }
-
-    private static void check() {
-        for (int i = 0; i < 4; i++) {
-            if (currentCounts[i] < checkCounts[i]) {
-                return;
-            }
+        switch (c) {
+            case 'A' :
+                if (myArr[0] == checkArr[0]) checkSecret--;
+                myArr[0]--;
+                break;
+            case 'C' :
+                if (myArr[1] == checkArr[1]) checkSecret--;
+                myArr[1]--;
+                break;
+            case 'G' :
+                if (myArr[2] == checkArr[2]) checkSecret--;
+                myArr[2]--;
+                break;
+            case 'T' :
+                if (myArr[3] == checkArr[3]) checkSecret--;
+                myArr[3]--;
+                break;
         }
-        count++;
     }
 }
