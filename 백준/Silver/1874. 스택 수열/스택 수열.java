@@ -19,7 +19,6 @@ public class Main {
         Stack<Integer> stack = new Stack<>();
 
         int num = 1;
-        boolean result = true;
         for (int i = 0; i < a.length; i++) {
             int target = a[i];
             if (num <= target) {
@@ -34,15 +33,12 @@ public class Main {
 
                 if (top > target) {
                     System.out.println("NO");
-                    result = false;
-                    break;
+                    return;
                 } else {
                     sb.append("-\n");
                 }
             }
         }
-        if (result) {
-            System.out.println(sb);
-        }
+        System.out.println(sb);
     }
 }
