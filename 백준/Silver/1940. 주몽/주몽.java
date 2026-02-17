@@ -1,15 +1,19 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Main {
 
+    static BufferedReader br;
+    static StringTokenizer st;
+    static StringBuilder sb;
+
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        br = new BufferedReader(new InputStreamReader(System.in));
+        st = new StringTokenizer(br.readLine());
+        sb = new StringBuilder();
 
         int n = Integer.parseInt(st.nextToken());
-        st = new StringTokenizer(br.readLine());
-        int m = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(br.readLine());
 
         int[] a = new int[n];
         st = new StringTokenizer(br.readLine());
@@ -19,23 +23,20 @@ public class Main {
 
         Arrays.sort(a);
 
-        int start = 0;
-        int end = a.length - 1;
-        int count = 0;
-
-        while (start < end) {
-            long sum = a[start] + a[end];
-
-            if (sum == m) {
+        int left = 0;
+        int right = a.length - 1;
+        long count = 0;
+        while (left < right) {
+            if (a[left] + a[right] == m) {
                 count++;
-                end--;
-            } else if (sum < m) {
-                start++;
+                left++;
+                right--;
+            } else if (a[left] + a[right] < m) {
+                left++;
             } else {
-                end--;
+                right--;
             }
         }
-
         System.out.println(count);
     }
 }
