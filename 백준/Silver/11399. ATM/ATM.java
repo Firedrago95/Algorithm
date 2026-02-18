@@ -1,35 +1,31 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int n = Integer.parseInt(st.nextToken());
-        int[] arr = new int[n];
+    static BufferedReader br;
+    static StringBuilder sb;
+    static StringTokenizer st;
+
+    public static void main(String[] args) throws IOException {
+        br = new BufferedReader(new InputStreamReader(System.in));
+        sb = new StringBuilder();
+
+        int n = Integer.parseInt(br.readLine());
+        int[] a = new int[n + 1];
 
         st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
+        for (int i = 1; i <= n; i++) {
+            a[i] = Integer.parseInt(st.nextToken());
         }
 
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = i; j >= 1; j--) {
-                if (arr[j] < arr[j - 1]) {
-                    int tmp = arr[j];
-                    arr[j] = arr[j - 1];
-                    arr[j-1] = tmp;
-                } else {
-                    break;
-                }
-            }
+        Arrays.sort(a);
+
+        long sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += ((long) a[i] * (n - i + 1));
         }
 
-        int result = 0;
-        for (int i = 0; i < arr.length; i++) {
-            result += (arr[i] * (arr.length - i));
-        }
-        System.out.println(result);
+        System.out.println(sum);
     }
 }
