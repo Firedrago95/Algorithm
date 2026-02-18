@@ -2,34 +2,39 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
+
+    static BufferedReader br;
+    static StringBuilder sb;
+    static StringTokenizer st;
+
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
+        br = new BufferedReader(new InputStreamReader(System.in));
+        sb = new StringBuilder();
 
-        int num = Integer.parseInt(br.readLine());
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int[] seq = new int[num];
+        int n = Integer.parseInt(br.readLine());
+        int[] a = new int[n];
+        int[] ans = new int[n];
+        Stack<Integer> stack = new Stack<>();
 
-        for (int i = 0; i < num; i++) {
-            seq[i] = Integer.parseInt(st.nextToken());
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < n; i++) {
+            a[i] = Integer.parseInt(st.nextToken());
         }
 
-        Stack<Integer> stack = new Stack<Integer>();
-        for (int i = 0; i < num; i++) {
-            if (!stack.isEmpty()) {
-                while (!stack.isEmpty() && seq[i] > seq[stack.peek()]) {
-                    seq[stack.pop()] = seq[i];
-                }
+        stack.push(0);
+        for (int i = 1; i < n; i++) {
+            while (!stack.isEmpty() && a[stack.peek()] < a[i]) {
+                ans[stack.pop()] = a[i];
             }
             stack.push(i);
         }
 
         while (!stack.isEmpty()) {
-            seq[stack.pop()] = -1;
+            ans[stack.pop()] = - 1;
         }
 
-        for (int n : seq) {
-            sb.append(n).append(" ");
+        for (int an : ans) {
+            sb.append(an).append(' ');
         }
         System.out.println(sb);
     }
