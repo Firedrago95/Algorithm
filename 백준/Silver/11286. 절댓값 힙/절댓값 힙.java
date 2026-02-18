@@ -1,33 +1,35 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Main {
+
+    static BufferedReader br;
+    static StringBuilder sb;
+    static StringTokenizer st;
+
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
+        br = new BufferedReader(new InputStreamReader(System.in));
+        sb = new StringBuilder();
 
         int n = Integer.parseInt(br.readLine());
 
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> {
-            int absA = Math.abs(a);
-            int absB = Math.abs(b);
+        PriorityQueue<Integer> q = new PriorityQueue<>(
+            Comparator.comparing((Integer i) -> Math.abs(i))
+                .thenComparing(i -> i)
+        );
 
-            if (absA == absB) {
-                return a - b;
-            }
-            return absA - absB;
-        });
+        while (n-- > 0) {
+            int c = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < n; i++) {
-            int command = Integer.parseInt(br.readLine());
-            if (command != 0) {
-                pq.add(command);
+            if (c != 0) {
+                q.add(c);
             } else {
-                if (pq.isEmpty()) {
-                    sb.append("0\n");
+                Integer poll = q.poll();
+                if (poll == null) {
+                    sb.append(0).append("\n");
                     continue;
                 }
-                sb.append(pq.remove() + "\n");
+                sb.append(poll).append("\n");
             }
         }
         System.out.println(sb);
