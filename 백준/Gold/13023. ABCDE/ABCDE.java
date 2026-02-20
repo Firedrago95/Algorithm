@@ -1,58 +1,65 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Main {
 
-    static ArrayList<ArrayList<Integer>> a;
+    static BufferedReader br;
+    static StringTokenizer st;
+    static List<Integer>[] arr;
     static boolean[] visited;
-    static int exist;
+    static int n, m;
+    static boolean arrived;
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        br = new BufferedReader(new InputStreamReader(System.in));
+        st = new StringTokenizer(br.readLine());
 
-        int n = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
+        n = Integer.parseInt(st.nextToken());
+        m = Integer.parseInt(st.nextToken());
+        arrived = false;
 
-        a = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            a.add(new ArrayList<>());
-        }
+        arr = new List[n];
         visited = new boolean[n];
 
-        for (int i = 0; i < m; i++) {
-            st = new StringTokenizer(br.readLine());
-            int u = Integer.parseInt(st.nextToken());
-            int v = Integer.parseInt(st.nextToken());
-            a.get(u).add(v);
-            a.get(v).add(u);
-        }
-        
-        exist = 0;
         for (int i = 0; i < n; i++) {
-            visited[i] = true;
+            arr[i] = new ArrayList<>();
+        }
+
+        while (m-- > 0) {
+            st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            arr[a].add(b);
+            arr[b].add(a);
+        }
+
+        for (int i = 0; i < n; i++) {
             dfs(i, 1);
-            visited[i] = false;
-        }
-
-        System.out.println(exist);
-    }
-
-    public static void dfs(int current, int depth) {
-        if (depth == 5) {
-            exist = 1;
-            return;
-        }
-        
-        if (exist == 1) return;
-
-        for (int next : a.get(current)) {
-            if (!visited[next]) {
-                visited[next] = true;
-                dfs(next, depth + 1);
-                visited[next] = false;
+            if (arrived) {
+                break;
             }
         }
+        
+        if (arrived) {
+            System.out.println(1);
+        } else {
+            System.out.println(0);
+        }
     }
 
+    private static void dfs(int i, int depth) {
+        if (depth == 5 || arrived) {
+            arrived = true;
+            return;
+        }
+
+        visited[i] = true;
+
+        for (Integer n : arr[i]) {
+            if(!visited[n]) {
+                dfs(n, depth + 1);
+            }
+        }
+        visited[i] = false;
+    }
 }
