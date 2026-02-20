@@ -1,81 +1,75 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Main {
 
-    static ArrayList<ArrayList<Integer>> a;
+    static BufferedReader br;
+    static StringTokenizer st;
+    static StringBuilder sb;
+    static int n,m,v;
+    static List<Integer>[] arr;
     static boolean[] visited;
-    static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        br = new BufferedReader(new InputStreamReader(System.in));
+        st = new StringTokenizer(br.readLine());
+        sb = new StringBuilder();
 
-        int n = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
-        int v = Integer.parseInt(st.nextToken());
+        n = Integer.parseInt(st.nextToken());
+        m = Integer.parseInt(st.nextToken());
+        v = Integer.parseInt(st.nextToken());
 
-        a = new ArrayList<>();
-        for (int i = 0; i <= n; i++) {
-            a.add(new ArrayList<>());
-        }
         visited = new boolean[n + 1];
+        arr = new ArrayList[n + 1];
+        for (int i = 1; i <= n; i++) {
+            arr[i] = new ArrayList<>();
+        }
 
-        for (int i = 0; i < m; i++) {
+        while (m-- > 0) {
             st = new StringTokenizer(br.readLine());
-            int s = Integer.parseInt(st.nextToken());
-            int e = Integer.parseInt(st.nextToken());
-            a.get(s).add(e);
-            a.get(e).add(s);
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            arr[a].add(b);
+            arr[b].add(a);
         }
 
         for (int i = 1; i <= n; i++) {
-            // 핵심
-            Collections.sort(a.get(i));
+            Collections.sort(arr[i]);
         }
 
         dfs(v);
-
-        System.out.println(sb);
-
-        // bfs
+        sb.append("\n");
         visited = new boolean[n + 1];
-        sb.setLength(0);
-
         bfs(v);
-
         System.out.println(sb);
     }
 
-    private static void dfs(int num) {
-        if (visited[num]) return;
+    private static void bfs(int v) {
+        Queue<Integer> q = new ArrayDeque<>();
+        q.add(v);
 
-        visited[num] = true;
-        sb.append(num).append(" ");
+        while (!q.isEmpty()) {
+            Integer poll = q.poll();
+            sb.append(poll).append(' ');
+            visited[poll] = true;
+            for (Integer i : arr[poll]) {
+                if (visited[i]) continue;
 
-        for (int next : a.get(num)) {
-            if (!visited[next]) {
-                dfs(next);
+                visited[i] = true;
+                q.add(i);
             }
         }
     }
 
-    private static void bfs(int v) {
-        Queue<Integer> queue = new LinkedList<>();
+    private static void dfs(int v) {
+        if (visited[v]) return;
 
         visited[v] = true;
-        queue.add(v);
-        sb.append(v).append(" ");
+        sb.append(v).append(' ');
 
-        while (!queue.isEmpty()) {
-            Integer poll = queue.poll();
-
-            for (int next : a.get(poll)) {
-                if (!visited[next]) {
-                    visited[next] = true;
-                    queue.add(next);
-                    sb.append(next).append(" ");
-                }
+        for (Integer i : arr[v]) {
+            if (!visited[i]) {
+                dfs(i);
             }
         }
     }
