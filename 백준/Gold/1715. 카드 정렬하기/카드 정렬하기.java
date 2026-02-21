@@ -1,30 +1,28 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Main {
 
-    static int N;
+    static BufferedReader br;
+    static int n;
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        br = new BufferedReader(new InputStreamReader(System.in));
 
-        N = Integer.parseInt(br.readLine());
+        n = Integer.parseInt(br.readLine());
 
-        PriorityQueue<Integer> queue = new PriorityQueue<>();
-        for (int i = 0; i < N; i++) {
-            queue.add(Integer.parseInt(br.readLine()));
+        PriorityQueue<Long> q = new PriorityQueue<>();
+        for (int i = 0; i < n; i++) {
+            q.add(Long.parseLong(br.readLine()));
         }
 
-        int result = 0;
-        while (queue.size() > 1) {
-            int smallest = queue.poll();
-            int secondSmallest = queue.poll();
-            
-            int sum = smallest + secondSmallest;
-            result += sum;
-            queue.add(sum);
+        long sum = 0;
+        while (q.size() >= 2) {
+            long currentSum = q.poll() + q.poll();
+            sum += currentSum;
+            q.add(currentSum);
         }
 
-        System.out.println(result);
+        System.out.println(sum);
     }
 }
