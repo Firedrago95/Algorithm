@@ -1,32 +1,27 @@
 import java.util.*;
-
 class Solution {
     public int solution(int n, int[] lost, int[] reserve) {
-        int[] count = new int[n+1];
+        int[] status = new int[n];
         
-        Arrays.sort(lost);
-        Arrays.sort(reserve);
+        for (int l : lost) status[l - 1]--;
+        for (int r : reserve) status [r - 1]++;
         
-        for (int l : lost) count[l]++;
-        for (int r : reserve) count[r]--;
-        
-        for (int r : reserve) {
-            if(count[r] == -1) {
-                if (r > 1 && count[r - 1] == 1) {
-                    count[r - 1]--;
-                    count[r] = 0;
-                }
-                else if (r < n && count[r + 1] == 1) {
-                    count[r + 1]--;
-                    count[r] = 0;
+        for (int i = 0; i < n; i++) {
+            if (status[i] == -1) {
+                if (i > 0 && status[i - 1] == 1) {
+                    status[i]++;
+                    status[i - 1]--;
+                } else if (i < n - 1 && status[i + 1] == 1) {
+                    status[i]++;
+                    status[i + 1]--;
                 }
             }
         }
         
-        int result = 0;
-        for (int c : count) {
-            if (c > 0) result++;
+        int answer = 0;
+        for (int i = 0; i < n; i++) {
+            if (status[i] > -1) answer++; 
         }
-        return n - result;
+        return answer;
     }
 }
