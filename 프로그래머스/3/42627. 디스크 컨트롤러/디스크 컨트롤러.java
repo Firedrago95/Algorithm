@@ -3,7 +3,7 @@ class Solution {
     public int solution(int[][] jobs) {
         Arrays.sort(jobs, (a, b) -> a[0] - b[0]);
         
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+        Queue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
         
         int count = 0;
         int jobIndex = 0;
