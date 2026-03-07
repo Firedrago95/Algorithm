@@ -1,28 +1,26 @@
 import java.util.*;
 class Solution {
     public int[] solution(String[] operations) {
-        TreeMap<Integer, Integer> map = new TreeMap<>();
+        TreeMap<Integer, Integer> tm = new TreeMap<>();
         
-        for (String op : operations) {
-            String[] split = op.split(" ");
-            String command = split[0];
-            int value = Integer.parseInt(split[1]);
+        for (String operation : operations) {
+            String[] split = operation.split(" ");
+            String c = split[0];
+            int num = Integer.parseInt(split[1]);
             
-            if (command.equals("I")) {
-                map.put(value, map.getOrDefault(value, 0) + 1);
+            if (c.equals("I")) {
+                tm.put(num, tm.getOrDefault(num, 0) + 1);
             } else {
-                if (map.isEmpty()) continue;
-                
-                int targetKey = (value == 1) ? map.lastKey() : map.firstKey();
-                
-                if (map.get(targetKey) == 1) {
-                    map.remove(targetKey);
+                if (tm.isEmpty()) continue;
+                int targetKey = (num == 1) ? tm.lastKey() : tm.firstKey();
+                if (tm.get(targetKey) == 1) {
+                    tm.remove(targetKey);
                 } else {
-                    map.put(targetKey, map.get(targetKey) - 1);
+                    tm.put(targetKey, tm.get(targetKey) - 1);
                 }
             }
         }
-        if (map.isEmpty()) return new int[]{0,0};
-        return new int[]{map.lastKey(), map.firstKey()};
+        if (tm.isEmpty()) return new int[] {0,0};
+        return new int[] {tm.lastKey(), tm.firstKey()};
     }
 }
