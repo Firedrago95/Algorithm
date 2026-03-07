@@ -3,7 +3,7 @@ class Solution {
     public int solution(int[][] jobs) {
         Arrays.sort(jobs, (a, b) -> a[0] - b[0]);
         
-        Queue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
         
         int count = 0;
         int jobIndex = 0;
@@ -16,15 +16,14 @@ class Solution {
             }
             
             if (!pq.isEmpty()) {
-                int[] job = pq.poll();
-                totalWait += (currentTime + job[1]) - job[0];
-                currentTime += job[1];
+                int[] poll = pq.poll();
+                totalWait += (currentTime + poll[1] - poll[0]);
+                currentTime += poll[1];
                 count++;
             } else {
                 currentTime = jobs[jobIndex][0];
             }
         }
-        
         return totalWait / jobs.length;
     }
 }
