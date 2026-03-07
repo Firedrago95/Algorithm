@@ -7,7 +7,7 @@ class Solution {
         }
         
         int count = 0;
-        while (pq.size() >= 2 && pq.peek() < K) {
+        while (pq.size() > 1 && pq.peek() < K) {
             int first = pq.poll();
             int second = pq.poll();
             
