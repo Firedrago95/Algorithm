@@ -6,7 +6,7 @@ class Solution {
         this.visited = new boolean[n];
         
         for (int i = 0; i < n; i++) {
-            if(!visited[i]) {
+            if (!visited[i]) {
                 dfs(i, computers);
                 count++;
             }
