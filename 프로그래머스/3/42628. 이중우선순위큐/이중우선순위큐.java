@@ -1,26 +1,26 @@
 import java.util.*;
 class Solution {
     public int[] solution(String[] operations) {
-        TreeMap<Integer, Integer> tm = new TreeMap<>();
+        TreeMap<Integer, Integer> map = new TreeMap<>();
         
         for (String operation : operations) {
             String[] split = operation.split(" ");
-            String c = split[0];
+            String command = split[0];
             int num = Integer.parseInt(split[1]);
             
-            if (c.equals("I")) {
-                tm.put(num, tm.getOrDefault(num, 0) + 1);
+            if (command.equals("I")) {
+                map.put(num , map.getOrDefault(num , 0) + 1);
             } else {
-                if (tm.isEmpty()) continue;
-                int targetKey = (num == 1) ? tm.lastKey() : tm.firstKey();
-                if (tm.get(targetKey) == 1) {
-                    tm.remove(targetKey);
+                if (map.isEmpty()) continue;
+                int target = (num == 1) ? map.lastKey() : map.firstKey();
+                if (map.get(target) == 1) {
+                    map.remove(target);
                 } else {
-                    tm.put(targetKey, tm.get(targetKey) - 1);
+                    map.put(target, map.get(target) - 1);
                 }
             }
         }
-        if (tm.isEmpty()) return new int[] {0,0};
-        return new int[] {tm.lastKey(), tm.firstKey()};
+        if (map.isEmpty()) return new int[] {0,0};
+        return new int[] {map.lastKey(), map.firstKey()};
     }
 }
