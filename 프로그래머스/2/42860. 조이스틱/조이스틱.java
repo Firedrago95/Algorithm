@@ -1,18 +1,18 @@
 import java.util.*;
 class Solution {
     public int solution(String name) {
-        int n = name.length();
+        char[] names = name.toCharArray();
         int upDown = 0;
-        int leftRight = n - 1;
+        int leftRight = names.length - 1;
         
-        for (int i = 0; i < n; i++) {
-            upDown += Math.min(name.charAt(i) - 'A', 'Z' - name.charAt(i) + 1);
+        for (int i = 0; i < names.length; i++) {
+            upDown += Math.min('Z' - names[i] + 1, names[i] - 'A');
             
-            int next = i + 1;
-            while(next < n && name.charAt(next) == 'A') next++;
+            int index = i + 1;
+            while (index < names.length && names[index] == 'A') index++;
             
-            leftRight = Math.min(leftRight, (i * 2) + n - next);
-            leftRight = Math.min(leftRight, i + (n - next) * 2);
+            leftRight = Math.min(leftRight, i * 2 + (names.length - index));
+            leftRight = Math.min(leftRight, (names.length - index) * 2 + i);
         }
         
         return upDown + leftRight;
