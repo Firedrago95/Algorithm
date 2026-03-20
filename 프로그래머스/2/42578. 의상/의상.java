@@ -2,18 +2,16 @@ import java.util.*;
 class Solution {
     public int solution(String[][] clothes) {
         Map<String, Integer> map = new HashMap<>();
-        
         for (String[] c : clothes) {
-            String item = c[0];
-            String category = c[1];
+            String type = c[1];
             
-            map.put(category, map.getOrDefault(category, 0) + 1);
+            map.put(type, map.getOrDefault(type, 0) + 1);
         }
         
-        int answer = 1;
+        int result = 1;
         for (int v : map.values()) {
-            answer *= (v + 1);
+            result *= (v + 1);
         }
-        return answer - 1;
+        return result - 1;
     }
 }
