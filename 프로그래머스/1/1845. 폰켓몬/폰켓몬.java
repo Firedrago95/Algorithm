@@ -1,15 +1,12 @@
 import java.util.*;
 class Solution {
     public int solution(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
+        Set<Integer> set = new HashSet<>();
+        
         for (int n : nums) {
-            map.merge(n, 1, Integer::sum);
+            set.add(n);
         }
         
-        if (map.size() > nums.length / 2) {
-            return nums.length / 2;
-        }
-        
-        return map.size();
+        return Math.min(nums.length / 2 , set.size());
     }
 }
