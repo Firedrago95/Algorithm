@@ -2,17 +2,22 @@ import java.util.*;
 
 public class Solution {
     public int[] solution(int []arr) {
-        Queue<Integer> q = new ArrayDeque<>();
-        q.add(arr[0]);
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] == arr[i - 1]) continue;
-            q.add(arr[i]);
+        List<Integer> list = new ArrayList<>();
+        
+        int lastValue = -1;
+        
+        for (int num : arr) {
+            if (num != lastValue) {
+                list.add(num);
+                lastValue = num;
+            }
         }
-        int size = q.size();
-        int[] answer = new int[size];
-        for (int i = 0; i < size; i++) {
-            answer[i] = q.poll();
+        
+        int[] answer = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            answer[i] = list.get(i);
         }
+        
         return answer;
     }
 }
