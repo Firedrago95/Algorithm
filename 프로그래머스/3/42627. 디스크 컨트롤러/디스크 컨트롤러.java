@@ -3,25 +3,24 @@ class Solution {
     public int solution(int[][] jobs) {
         Arrays.sort(jobs, (a, b) -> a[0] - b[0]);
         
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+        PriorityQueue<int[]>pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
         
-        int currentTime = 0;
         int jobIdx = 0;
+        int time = 0;
         int totalWait = 0;
-        int count = 0;
         
-        while (count < jobs.length) {
-            while (jobIdx < jobs.length && jobs[jobIdx][0] <= currentTime) {
-                pq.add(jobs[jobIdx++]);
+        while(jobIdx < jobs.length || !pq.isEmpty()) {
+            while (jobIdx < jobs.length && jobs[jobIdx][0] <= time) {
+                pq.add(jobs[jobIdx]);
+                jobIdx++;
             }
             
             if (!pq.isEmpty()) {
-                int[] poll = pq.poll();
-                totalWait += currentTime + poll[1] - poll[0];
-                currentTime += poll[1];
-                count++;
+                int[] work = pq.poll();
+                totalWait += (time + work[1]) - work[0];
+                time += work[1];
             } else {
-                currentTime = jobs[jobIdx][0];
+                time = jobs[jobIdx][0];
             }
         }
         return totalWait / jobs.length;
