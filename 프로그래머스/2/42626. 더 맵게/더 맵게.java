@@ -5,12 +5,10 @@ class Solution {
         for (int s : scoville) {
             pq.add(s);
         }
-        
         int count = 0;
         while (pq.size() > 1 && pq.peek() < K) {
             int first = pq.poll();
             int second = pq.poll();
-            
             pq.add(first + (second * 2));
             count++;
         }
