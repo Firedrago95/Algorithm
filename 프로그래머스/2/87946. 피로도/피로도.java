@@ -1,20 +1,24 @@
 import java.util.*;
 class Solution {
     boolean[] visited;
-    int answer = 0;
+    int count = 0;
     public int solution(int k, int[][] dungeons) {
         visited = new boolean[dungeons.length];
-        dfs(k, dungeons, 0);
-        return answer;
+        
+        backTrack(dungeons, k, 0);
+        
+        return count;
     }
     
-    public void dfs (int k, int[][] dungeons, int count) {
-        answer = Math.max(answer, count);
+    public void backTrack(int[][] dungeons, int k, int depth) {
+        count = Math.max(count, depth);
+        
+        if (depth == dungeons.length) return;
         
         for (int i = 0; i < dungeons.length; i++) {
             if (!visited[i] && k >= dungeons[i][0]) {
                 visited[i] = true;
-                dfs(k - dungeons[i][1], dungeons, count + 1);
+                backTrack(dungeons, k - dungeons[i][1], depth + 1);
                 visited[i] = false;
             }
         }
