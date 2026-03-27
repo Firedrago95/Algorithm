@@ -1,22 +1,23 @@
 import java.util.*;
-class Solution {    
-    Set<Integer> set = new HashSet<>();
+class Solution {
     boolean[] visited;
+    Set<Integer> set;
     public int solution(String numbers) {
-        this.visited = new boolean[numbers.length()];
+        set = new HashSet<>();
+        visited = new boolean[numbers.length()];
         
         backTrack(numbers, "");
         
         int count = 0;
-        for (int n : set) {
-            if (isPrime(n)) {
+        for (int s : set) {
+            if (isPrime(s)) {
                 count++;
             }
         }
         return count;
     }
     
-    public void backTrack(String numbers , String input) {
+    public void backTrack(String numbers, String input) {
         if (!input.isEmpty()) {
             set.add(Integer.parseInt(input));
         }
@@ -30,9 +31,8 @@ class Solution {
         }
     }
     
-    public boolean isPrime (int n) {
+    public boolean isPrime(int n) {
         if (n < 2) return false;
-        
         for (int i = 2; i * i <= n; i++) {
             if (n % i == 0) return false;
         }
