@@ -1,19 +1,21 @@
 import java.util.*;
 class Solution {
     public String solution(String number, int k) {
-        StringBuilder sb = new StringBuilder();
-        int targetLength = number.length() - k;
+        Stack<Character> stack = new Stack<>();
 
-        for (int i = 0; i < number.length(); i++) {
-            char c = number.charAt(i);
-            
-            while (k > 0 && sb.length() > 0 && sb.charAt(sb.length() - 1) < c) {
-                sb.deleteCharAt(sb.length() - 1);
+        for (char ch : number.toCharArray()) {
+            while (!stack.isEmpty() && stack.peek() < ch && k > 0) {
+                stack.pop();
                 k--;
             }
-            sb.append(c);
+            stack.push(ch);
         }
 
-        return sb.substring(0, targetLength);
+        while (k-- > 0) stack.pop();
+
+        StringBuilder sb = new StringBuilder();
+        for (char ch : stack) sb.append(ch);
+
+        return sb.toString();
     }
 }
