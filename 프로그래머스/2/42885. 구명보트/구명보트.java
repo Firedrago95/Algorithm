@@ -3,16 +3,18 @@ class Solution {
     public int solution(int[] people, int limit) {
         Arrays.sort(people);
         
-        int left = 0;
-        int right = people.length - 1;
+        int start = 0;
+        int end = people.length - 1;
         int count = 0;
-        while (left <= right) {
-            if (people[left] + people[right] <= limit) {
-                left++;
-                right--;
-            } else {
-                right--;
+        while (start <= end) {
+            if (start == end) {
+                count++;
+                break;
             }
+            if (people[start] + people[end] <= limit) {
+                start++;
+            }
+            end--;
             count++;
         }
         return count;
