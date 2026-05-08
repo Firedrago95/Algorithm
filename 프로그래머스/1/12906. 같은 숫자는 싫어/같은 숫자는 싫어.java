@@ -2,22 +2,19 @@ import java.util.*;
 
 public class Solution {
     public int[] solution(int []arr) {
-        List<Integer> list = new ArrayList<>();
+        int[] tmp = new int[arr.length];
+        int j = 0;
         
-        int lastValue = -1;
+        if(arr.length > 0) {
+            tmp[j++] = arr[0];
+        }
         
-        for (int num : arr) {
-            if (num != lastValue) {
-                list.add(num);
-                lastValue = num;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] != tmp[j - 1]) {
+                tmp[j++] = arr[i];
             }
         }
         
-        int[] answer = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            answer[i] = list.get(i);
-        }
-        
-        return answer;
+        return Arrays.copyOf(tmp, j);
     }
 }
