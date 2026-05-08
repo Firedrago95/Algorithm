@@ -4,23 +4,34 @@ class Solution {
         Deque<Integer> q = new ArrayDeque<>();
         
         for (int i = 0; i < progresses.length; i++) {
-            int p = 100 - progresses[i];
-            int s = speeds[i];
+            int progress = progresses[i];
+            int speed = speeds[i];
             
-            q.add((p + (s - 1)) / s);
+            int day = (100 - progress) / speed;
+            if ((100 - progress) % speed != 0) day++; 
+            q.addLast(day);
         }
         
-        List<Integer> l = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
         while (!q.isEmpty()) {
-            int d = q.poll();
             int count = 1;
-            while (!q.isEmpty() && q.peek() <= d) {
-                q.poll();
-                count++;
+            int poll = q.pollFirst();
+            
+            while (!q.isEmpty()) {
+                if (q.peekFirst() <= poll) {
+                    count++;
+                    q.pollFirst();
+                } else {
+                    break;
+                }
             }
-            l.add(count);
+            result.add(count);
         }
         
-        return l.stream().mapToInt(Integer::intValue).toArray();
+        int[] f = new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            f[i] = result.get(i);
+        }
+        return f;
     }
 }
