@@ -1,20 +1,26 @@
 import java.util.*;
 class Solution {
     public int[] solution(int[] array, int[][] commands) {
-        int[] answer = new int[commands.length];
+        // commands 개수 만큼 담을 배열 생성
+        int n = commands.length;
+        int[] answer = new int[n];
         
-        for (int i = 0; i < commands.length; i++) {
-            int[] nums = new int[commands[i][1] - commands[i][0] + 1];
-            int k = 0;
+        for (int i = 0; i < n; i++) {
+            int start = commands[i][0] - 1;
+            int end = commands[i][1];
+            int target = commands[i][2] - 1;
             
-            for (int j = commands[i][0] - 1; j < commands[i][1]; j++) {
-                nums[k++] = array[j];
+            int[] parts = new int[end - start];
+            for (int j = start; j < end; j++) {
+                parts[j - start] = array[j];
             }
             
-            Arrays.sort(nums);
+            Arrays.sort(parts);
             
-            answer[i] = nums[commands[i][2] - 1];
+            answer[i] = parts[target];
         }
+        
+        // commands 개수 만큼 for문 
         return answer;
     }
 }
