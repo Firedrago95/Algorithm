@@ -9,6 +9,7 @@ class Solution {
                 sizes[i][0] = sizes[i][1];
                 sizes[i][1] = tmp;
             }
+            
             maxWidth = Math.max(maxWidth, sizes[i][0]);
             maxHeight = Math.max(maxHeight, sizes[i][1]);
         }
