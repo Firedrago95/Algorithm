@@ -9,11 +9,13 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Firedrago95/Algorithm/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/Firedrago95/Algorithm/tree/main/0080-remove-duplicates-from-sorted-array-ii/) | Medium |
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
+| [0189-rotate-array](https://github.com/Firedrago95/Algorithm/tree/main/0189-rotate-array/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Firedrago95/Algorithm/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/Firedrago95/Algorithm/tree/main/0080-remove-duplicates-from-sorted-array-ii/) | Medium |
+| [0189-rotate-array](https://github.com/Firedrago95/Algorithm/tree/main/0189-rotate-array/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -30,4 +32,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0189-rotate-array](https://github.com/Firedrago95/Algorithm/tree/main/0189-rotate-array/) | Medium |
 <!---LeetCode Topics End-->
