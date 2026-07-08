@@ -6,9 +6,10 @@ class Solution {
         for (int i = 0; i < nums.length; i++) {
             if (count == 0) {
                 candidate = nums[i];
+                count = 0;
             }
-            
-            if (nums[i] == candidate) {
+
+            if (candidate == nums[i]) {
                 count++;
             } else {
                 count--;
