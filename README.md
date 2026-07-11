@@ -32,6 +32,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0012-integer-to-roman](https://github.com/Firedrago95/Algorithm/tree/main/0012-integer-to-roman/) | Medium |
 | [0013-roman-to-integer](https://github.com/Firedrago95/Algorithm/tree/main/0013-roman-to-integer/) | Easy |
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
 | [0380-insert-delete-getrandom-o1](https://github.com/Firedrago95/Algorithm/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
@@ -52,6 +53,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0012-integer-to-roman](https://github.com/Firedrago95/Algorithm/tree/main/0012-integer-to-roman/) | Medium |
 | [0013-roman-to-integer](https://github.com/Firedrago95/Algorithm/tree/main/0013-roman-to-integer/) | Easy |
 | [0189-rotate-array](https://github.com/Firedrago95/Algorithm/tree/main/0189-rotate-array/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/Firedrago95/Algorithm/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
@@ -98,5 +100,6 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0012-integer-to-roman](https://github.com/Firedrago95/Algorithm/tree/main/0012-integer-to-roman/) | Medium |
 | [0013-roman-to-integer](https://github.com/Firedrago95/Algorithm/tree/main/0013-roman-to-integer/) | Easy |
 <!---LeetCode Topics End-->
