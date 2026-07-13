@@ -102,4 +102,5 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- | ------- |
 | [0012-integer-to-roman](https://github.com/Firedrago95/Algorithm/tree/main/0012-integer-to-roman/) | Medium |
 | [0013-roman-to-integer](https://github.com/Firedrago95/Algorithm/tree/main/0013-roman-to-integer/) | Easy |
+| [0058-length-of-last-word](https://github.com/Firedrago95/Algorithm/tree/main/0058-length-of-last-word/) | Easy |
 <!---LeetCode Topics End-->
