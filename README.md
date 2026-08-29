@@ -34,6 +34,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0125-valid-palindrome](https://github.com/Firedrago95/Algorithm/tree/main/0125-valid-palindrome/) | Easy |
 | [0151-reverse-words-in-a-string](https://github.com/Firedrago95/Algorithm/tree/main/0151-reverse-words-in-a-string/) | Medium |
 | [0189-rotate-array](https://github.com/Firedrago95/Algorithm/tree/main/0189-rotate-array/) | Medium |
+| [0392-is-subsequence](https://github.com/Firedrago95/Algorithm/tree/main/0392-is-subsequence/) | Easy |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -70,6 +71,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0055-jump-game](https://github.com/Firedrago95/Algorithm/tree/main/0055-jump-game/) | Medium |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Firedrago95/Algorithm/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Firedrago95/Algorithm/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
+| [0392-is-subsequence](https://github.com/Firedrago95/Algorithm/tree/main/0392-is-subsequence/) | Easy |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -114,6 +116,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0068-text-justification](https://github.com/Firedrago95/Algorithm/tree/main/0068-text-justification/) | Hard |
 | [0125-valid-palindrome](https://github.com/Firedrago95/Algorithm/tree/main/0125-valid-palindrome/) | Easy |
 | [0151-reverse-words-in-a-string](https://github.com/Firedrago95/Algorithm/tree/main/0151-reverse-words-in-a-string/) | Medium |
+| [0392-is-subsequence](https://github.com/Firedrago95/Algorithm/tree/main/0392-is-subsequence/) | Easy |
 ## Trie
 | Problem Name | Difficulty |
 | ------- | ------- |
