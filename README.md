@@ -141,4 +141,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0068-text-justification](https://github.com/Firedrago95/Algorithm/tree/main/0068-text-justification/) | Hard |
+## Boyer–Moore Majority Vote Algorithm
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
 <!---LeetCode Topics End-->
