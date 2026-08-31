@@ -8,6 +8,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/Firedrago95/Algorithm/tree/main/0011-container-with-most-water/) | Medium |
 | [0014-longest-common-prefix](https://github.com/Firedrago95/Algorithm/tree/main/0014-longest-common-prefix/) | Easy |
+| [0015-3sum](https://github.com/Firedrago95/Algorithm/tree/main/0015-3sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Firedrago95/Algorithm/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0042-trapping-rain-water](https://github.com/Firedrago95/Algorithm/tree/main/0042-trapping-rain-water/) | Hard |
 | [0045-jump-game-ii](https://github.com/Firedrago95/Algorithm/tree/main/0045-jump-game-ii/) | Medium |
@@ -29,6 +30,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/Firedrago95/Algorithm/tree/main/0011-container-with-most-water/) | Medium |
+| [0015-3sum](https://github.com/Firedrago95/Algorithm/tree/main/0015-3sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Firedrago95/Algorithm/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Firedrago95/Algorithm/tree/main/0028-find-the-index-of-the-first-occurrence-in-a-string/) | Easy |
 | [0042-trapping-rain-water](https://github.com/Firedrago95/Algorithm/tree/main/0042-trapping-rain-water/) | Hard |
@@ -53,6 +55,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/Firedrago95/Algorithm/tree/main/0015-3sum/) | Medium |
 | [0088-merge-sorted-array](https://github.com/Firedrago95/Algorithm/tree/main/0088-merge-sorted-array/) | Easy |
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
 | [0274-h-index](https://github.com/Firedrago95/Algorithm/tree/main/0274-h-index/) | Medium |
