@@ -6,16 +6,17 @@ class Solution {
         for (char c : t.toCharArray()) {
             count[c]++;
         }
-
-        int left = 0;
+        
         int minLength = Integer.MAX_VALUE;
-        int start = 0;
         int required = t.length();
+        int left = 0;
+        int start = 0;
 
         for (int right = 0; right < s.length(); right++) {
             char rChar = s.charAt(right);
-            if (count[rChar] > 0) required--;
-
+            if (count[rChar] > 0) {
+                required--;
+            }
             count[rChar]--;
 
             while (required == 0) {
@@ -31,7 +32,7 @@ class Solution {
                 }
                 left++;
             }
-        }    
+        }
         return minLength == Integer.MAX_VALUE ? "" : s.substring(start, start + minLength);
     }
 }
