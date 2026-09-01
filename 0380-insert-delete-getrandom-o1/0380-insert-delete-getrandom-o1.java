@@ -1,20 +1,16 @@
 class RandomizedSet {
-
-    private final List<Integer> list;
     private final Map<Integer, Integer> map;
-    private final Random rand;
+    private final List<Integer> list;
 
     public RandomizedSet() {
-        list = new ArrayList<>();
         map = new HashMap<>();
-        rand = new Random();
+        list = new ArrayList<>();
     }
     
     public boolean insert(int val) {
         if (map.containsKey(val)) {
             return false;
         }
-
         map.put(val, list.size());
         list.add(val);
         return true;
@@ -24,20 +20,18 @@ class RandomizedSet {
         if (!map.containsKey(val)) {
             return false;
         }
-
-        int valIndex = map.get(val);
+        int idx = map.get(val);
         int lastElement = list.get(list.size() - 1);
-
-        list.set(valIndex, lastElement);
-        map.put(lastElement, valIndex);
-
+        list.set(idx, lastElement);
+        map.put(lastElement, idx);
         list.remove(list.size() - 1);
         map.remove(val);
         return true;
     }
     
     public int getRandom() {
-        return list.get(rand.nextInt(list.size()));
+        int idx = (int) (Math.random() * list.size());
+        return list.get(idx);
     }
 }
 
