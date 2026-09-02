@@ -10,6 +10,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0014-longest-common-prefix](https://github.com/Firedrago95/Algorithm/tree/main/0014-longest-common-prefix/) | Easy |
 | [0015-3sum](https://github.com/Firedrago95/Algorithm/tree/main/0015-3sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Firedrago95/Algorithm/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
+| [0036-valid-sudoku](https://github.com/Firedrago95/Algorithm/tree/main/0036-valid-sudoku/) | Medium |
 | [0042-trapping-rain-water](https://github.com/Firedrago95/Algorithm/tree/main/0042-trapping-rain-water/) | Hard |
 | [0045-jump-game-ii](https://github.com/Firedrago95/Algorithm/tree/main/0045-jump-game-ii/) | Medium |
 | [0055-jump-game](https://github.com/Firedrago95/Algorithm/tree/main/0055-jump-game/) | Medium |
@@ -49,6 +50,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0012-integer-to-roman](https://github.com/Firedrago95/Algorithm/tree/main/0012-integer-to-roman/) | Medium |
 | [0013-roman-to-integer](https://github.com/Firedrago95/Algorithm/tree/main/0013-roman-to-integer/) | Easy |
 | [0030-substring-with-concatenation-of-all-words](https://github.com/Firedrago95/Algorithm/tree/main/0030-substring-with-concatenation-of-all-words/) | Hard |
+| [0036-valid-sudoku](https://github.com/Firedrago95/Algorithm/tree/main/0036-valid-sudoku/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Firedrago95/Algorithm/tree/main/0076-minimum-window-substring/) | Hard |
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
 | [0380-insert-delete-getrandom-o1](https://github.com/Firedrago95/Algorithm/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
@@ -173,4 +175,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0030-substring-with-concatenation-of-all-words](https://github.com/Firedrago95/Algorithm/tree/main/0030-substring-with-concatenation-of-all-words/) | Hard |
 | [0076-minimum-window-substring](https://github.com/Firedrago95/Algorithm/tree/main/0076-minimum-window-substring/) | Hard |
 | [0209-minimum-size-subarray-sum](https://github.com/Firedrago95/Algorithm/tree/main/0209-minimum-size-subarray-sum/) | Medium |
+## Matrix
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0036-valid-sudoku](https://github.com/Firedrago95/Algorithm/tree/main/0036-valid-sudoku/) | Medium |
 <!---LeetCode Topics End-->
