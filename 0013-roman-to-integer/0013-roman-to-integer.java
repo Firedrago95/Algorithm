@@ -1,23 +1,24 @@
 class Solution {
     public int romanToInt(String s) {
         int total = 0;
-        int prev = 0;
-        for (int i = s.length() - 1; i >= 0; i--) {
-            int current = getValue(s.charAt(i));
+        int n = s.length();
 
-            if (current < prev) {
-                total -= current;
+        for (int i = 0; i < n - 1; i++) {
+            int cur = getValue(s.charAt(i));
+            int next = getValue(s.charAt(i + 1));
+
+            if (cur < next) {
+                total -= cur;
             } else {
-                total += current;
+                total += cur;
             }
-
-            prev = current;
         }
-        return total;
+
+        return total + getValue(s.charAt(n - 1));
     }
 
-    private int getValue(char c) {
-        return switch (c) {
+    private int getValue(char ch) {
+        return switch (ch) {
             case 'I' -> 1;
             case 'V' -> 5;
             case 'X' -> 10;
@@ -28,4 +29,4 @@ class Solution {
             default -> 0;
         };
     }
- }
+}
