@@ -30,6 +30,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0209-minimum-size-subarray-sum](https://github.com/Firedrago95/Algorithm/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0238-product-of-array-except-self](https://github.com/Firedrago95/Algorithm/tree/main/0238-product-of-array-except-self/) | Medium |
 | [0274-h-index](https://github.com/Firedrago95/Algorithm/tree/main/0274-h-index/) | Medium |
+| [0289-game-of-life](https://github.com/Firedrago95/Algorithm/tree/main/0289-game-of-life/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/Firedrago95/Algorithm/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
@@ -165,6 +166,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- | ------- |
 | [0054-spiral-matrix](https://github.com/Firedrago95/Algorithm/tree/main/0054-spiral-matrix/) | Medium |
 | [0068-text-justification](https://github.com/Firedrago95/Algorithm/tree/main/0068-text-justification/) | Hard |
+| [0289-game-of-life](https://github.com/Firedrago95/Algorithm/tree/main/0289-game-of-life/) | Medium |
 ## Boyer–Moore Majority Vote Algorithm
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -188,4 +190,5 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0048-rotate-image](https://github.com/Firedrago95/Algorithm/tree/main/0048-rotate-image/) | Medium |
 | [0054-spiral-matrix](https://github.com/Firedrago95/Algorithm/tree/main/0054-spiral-matrix/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/Firedrago95/Algorithm/tree/main/0073-set-matrix-zeroes/) | Medium |
+| [0289-game-of-life](https://github.com/Firedrago95/Algorithm/tree/main/0289-game-of-life/) | Medium |
 <!---LeetCode Topics End-->
