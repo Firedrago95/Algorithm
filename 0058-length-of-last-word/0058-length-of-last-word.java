@@ -1,17 +1,16 @@
 class Solution {
     public int lengthOfLastWord(String s) {
-        int end = s.length() - 1;
+        int length = 0;
+        int point = s.length() - 1;
 
-        while (s.charAt(end) == ' ') {
-            end--;
+        while (point >= 0 && s.charAt(point) == ' ') {
+            point--;
         }
 
-        int start = end;
-
-        while (start >= 0 && s.charAt(start) != ' ') {
-            start--;
+        while (point >= 0 && s.charAt(point) != ' ') {
+            length++;
+            point--;
         }
-
-        return end - start;
+        return length;
     }
 }
