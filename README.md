@@ -17,6 +17,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0054-spiral-matrix](https://github.com/Firedrago95/Algorithm/tree/main/0054-spiral-matrix/) | Medium |
 | [0055-jump-game](https://github.com/Firedrago95/Algorithm/tree/main/0055-jump-game/) | Medium |
 | [0068-text-justification](https://github.com/Firedrago95/Algorithm/tree/main/0068-text-justification/) | Hard |
+| [0073-set-matrix-zeroes](https://github.com/Firedrago95/Algorithm/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/Firedrago95/Algorithm/tree/main/0080-remove-duplicates-from-sorted-array-ii/) | Medium |
 | [0088-merge-sorted-array](https://github.com/Firedrago95/Algorithm/tree/main/0088-merge-sorted-array/) | Easy |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Firedrago95/Algorithm/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
@@ -53,6 +54,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0013-roman-to-integer](https://github.com/Firedrago95/Algorithm/tree/main/0013-roman-to-integer/) | Easy |
 | [0030-substring-with-concatenation-of-all-words](https://github.com/Firedrago95/Algorithm/tree/main/0030-substring-with-concatenation-of-all-words/) | Hard |
 | [0036-valid-sudoku](https://github.com/Firedrago95/Algorithm/tree/main/0036-valid-sudoku/) | Medium |
+| [0073-set-matrix-zeroes](https://github.com/Firedrago95/Algorithm/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Firedrago95/Algorithm/tree/main/0076-minimum-window-substring/) | Hard |
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
 | [0380-insert-delete-getrandom-o1](https://github.com/Firedrago95/Algorithm/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
@@ -185,4 +187,5 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0036-valid-sudoku](https://github.com/Firedrago95/Algorithm/tree/main/0036-valid-sudoku/) | Medium |
 | [0048-rotate-image](https://github.com/Firedrago95/Algorithm/tree/main/0048-rotate-image/) | Medium |
 | [0054-spiral-matrix](https://github.com/Firedrago95/Algorithm/tree/main/0054-spiral-matrix/) | Medium |
+| [0073-set-matrix-zeroes](https://github.com/Firedrago95/Algorithm/tree/main/0073-set-matrix-zeroes/) | Medium |
 <!---LeetCode Topics End-->
