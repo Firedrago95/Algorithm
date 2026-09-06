@@ -58,6 +58,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0073-set-matrix-zeroes](https://github.com/Firedrago95/Algorithm/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Firedrago95/Algorithm/tree/main/0076-minimum-window-substring/) | Hard |
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
+| [0290-word-pattern](https://github.com/Firedrago95/Algorithm/tree/main/0290-word-pattern/) | Easy |
 | [0380-insert-delete-getrandom-o1](https://github.com/Firedrago95/Algorithm/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0383-ransom-note](https://github.com/Firedrago95/Algorithm/tree/main/0383-ransom-note/) | Easy |
 ## Divide and Conquer
@@ -142,6 +143,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0076-minimum-window-substring](https://github.com/Firedrago95/Algorithm/tree/main/0076-minimum-window-substring/) | Hard |
 | [0125-valid-palindrome](https://github.com/Firedrago95/Algorithm/tree/main/0125-valid-palindrome/) | Easy |
 | [0151-reverse-words-in-a-string](https://github.com/Firedrago95/Algorithm/tree/main/0151-reverse-words-in-a-string/) | Medium |
+| [0290-word-pattern](https://github.com/Firedrago95/Algorithm/tree/main/0290-word-pattern/) | Easy |
 | [0383-ransom-note](https://github.com/Firedrago95/Algorithm/tree/main/0383-ransom-note/) | Easy |
 | [0392-is-subsequence](https://github.com/Firedrago95/Algorithm/tree/main/0392-is-subsequence/) | Easy |
 ## Trie
