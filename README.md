@@ -48,6 +48,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0151-reverse-words-in-a-string](https://github.com/Firedrago95/Algorithm/tree/main/0151-reverse-words-in-a-string/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/Firedrago95/Algorithm/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0189-rotate-array](https://github.com/Firedrago95/Algorithm/tree/main/0189-rotate-array/) | Medium |
+| [0202-happy-number](https://github.com/Firedrago95/Algorithm/tree/main/0202-happy-number/) | Easy |
 | [0392-is-subsequence](https://github.com/Firedrago95/Algorithm/tree/main/0392-is-subsequence/) | Easy |
 ## Hash Table
 | Problem Name | Difficulty |
@@ -62,6 +63,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0073-set-matrix-zeroes](https://github.com/Firedrago95/Algorithm/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Firedrago95/Algorithm/tree/main/0076-minimum-window-substring/) | Hard |
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
+| [0202-happy-number](https://github.com/Firedrago95/Algorithm/tree/main/0202-happy-number/) | Easy |
 | [0242-valid-anagram](https://github.com/Firedrago95/Algorithm/tree/main/0242-valid-anagram/) | Easy |
 | [0290-word-pattern](https://github.com/Firedrago95/Algorithm/tree/main/0290-word-pattern/) | Easy |
 | [0380-insert-delete-getrandom-o1](https://github.com/Firedrago95/Algorithm/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
@@ -91,6 +93,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0013-roman-to-integer](https://github.com/Firedrago95/Algorithm/tree/main/0013-roman-to-integer/) | Easy |
 | [0048-rotate-image](https://github.com/Firedrago95/Algorithm/tree/main/0048-rotate-image/) | Medium |
 | [0189-rotate-array](https://github.com/Firedrago95/Algorithm/tree/main/0189-rotate-array/) | Medium |
+| [0202-happy-number](https://github.com/Firedrago95/Algorithm/tree/main/0202-happy-number/) | Easy |
 | [0380-insert-delete-getrandom-o1](https://github.com/Firedrago95/Algorithm/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -205,4 +208,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0054-spiral-matrix](https://github.com/Firedrago95/Algorithm/tree/main/0054-spiral-matrix/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/Firedrago95/Algorithm/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0289-game-of-life](https://github.com/Firedrago95/Algorithm/tree/main/0289-game-of-life/) | Medium |
+## Floyd's Cycle Finding Algorithm
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0202-happy-number](https://github.com/Firedrago95/Algorithm/tree/main/0202-happy-number/) | Easy |
 <!---LeetCode Topics End-->
