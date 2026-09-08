@@ -30,6 +30,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/Firedrago95/Algorithm/tree/main/0189-rotate-array/) | Medium |
 | [0209-minimum-size-subarray-sum](https://github.com/Firedrago95/Algorithm/tree/main/0209-minimum-size-subarray-sum/) | Medium |
+| [0219-contains-duplicate-ii](https://github.com/Firedrago95/Algorithm/tree/main/0219-contains-duplicate-ii/) | Easy |
 | [0238-product-of-array-except-self](https://github.com/Firedrago95/Algorithm/tree/main/0238-product-of-array-except-self/) | Medium |
 | [0274-h-index](https://github.com/Firedrago95/Algorithm/tree/main/0274-h-index/) | Medium |
 | [0289-game-of-life](https://github.com/Firedrago95/Algorithm/tree/main/0289-game-of-life/) | Medium |
@@ -64,6 +65,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0076-minimum-window-substring](https://github.com/Firedrago95/Algorithm/tree/main/0076-minimum-window-substring/) | Hard |
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
 | [0202-happy-number](https://github.com/Firedrago95/Algorithm/tree/main/0202-happy-number/) | Easy |
+| [0219-contains-duplicate-ii](https://github.com/Firedrago95/Algorithm/tree/main/0219-contains-duplicate-ii/) | Easy |
 | [0242-valid-anagram](https://github.com/Firedrago95/Algorithm/tree/main/0242-valid-anagram/) | Easy |
 | [0290-word-pattern](https://github.com/Firedrago95/Algorithm/tree/main/0290-word-pattern/) | Easy |
 | [0380-insert-delete-getrandom-o1](https://github.com/Firedrago95/Algorithm/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
@@ -200,6 +202,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0030-substring-with-concatenation-of-all-words](https://github.com/Firedrago95/Algorithm/tree/main/0030-substring-with-concatenation-of-all-words/) | Hard |
 | [0076-minimum-window-substring](https://github.com/Firedrago95/Algorithm/tree/main/0076-minimum-window-substring/) | Hard |
 | [0209-minimum-size-subarray-sum](https://github.com/Firedrago95/Algorithm/tree/main/0209-minimum-size-subarray-sum/) | Medium |
+| [0219-contains-duplicate-ii](https://github.com/Firedrago95/Algorithm/tree/main/0219-contains-duplicate-ii/) | Easy |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
