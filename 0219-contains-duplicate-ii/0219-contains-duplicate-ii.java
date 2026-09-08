@@ -6,7 +6,7 @@ class Solution {
             int num = nums[i];
             if (map.containsKey(num)) {
                 int nidx = map.get(num);
-                if (Math.abs(i - nidx) <= k) return true;
+                if (i - nidx <= k) return true;
             }
             map.put(num, i);
         }
