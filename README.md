@@ -24,6 +24,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0088-merge-sorted-array](https://github.com/Firedrago95/Algorithm/tree/main/0088-merge-sorted-array/) | Easy |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Firedrago95/Algorithm/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Firedrago95/Algorithm/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
+| [0128-longest-consecutive-sequence](https://github.com/Firedrago95/Algorithm/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0134-gas-station](https://github.com/Firedrago95/Algorithm/tree/main/0134-gas-station/) | Medium |
 | [0135-candy](https://github.com/Firedrago95/Algorithm/tree/main/0135-candy/) | Hard |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/Firedrago95/Algorithm/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
@@ -63,6 +64,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0049-group-anagrams](https://github.com/Firedrago95/Algorithm/tree/main/0049-group-anagrams/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/Firedrago95/Algorithm/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Firedrago95/Algorithm/tree/main/0076-minimum-window-substring/) | Hard |
+| [0128-longest-consecutive-sequence](https://github.com/Firedrago95/Algorithm/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
 | [0202-happy-number](https://github.com/Firedrago95/Algorithm/tree/main/0202-happy-number/) | Easy |
 | [0219-contains-duplicate-ii](https://github.com/Firedrago95/Algorithm/tree/main/0219-contains-duplicate-ii/) | Easy |
@@ -215,4 +217,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0202-happy-number](https://github.com/Firedrago95/Algorithm/tree/main/0202-happy-number/) | Easy |
+## Union-Find
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/Firedrago95/Algorithm/tree/main/0128-longest-consecutive-sequence/) | Medium |
 <!---LeetCode Topics End-->
