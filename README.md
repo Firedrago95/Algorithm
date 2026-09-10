@@ -32,6 +32,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0189-rotate-array](https://github.com/Firedrago95/Algorithm/tree/main/0189-rotate-array/) | Medium |
 | [0209-minimum-size-subarray-sum](https://github.com/Firedrago95/Algorithm/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0219-contains-duplicate-ii](https://github.com/Firedrago95/Algorithm/tree/main/0219-contains-duplicate-ii/) | Easy |
+| [0228-summary-ranges](https://github.com/Firedrago95/Algorithm/tree/main/0228-summary-ranges/) | Easy |
 | [0238-product-of-array-except-self](https://github.com/Firedrago95/Algorithm/tree/main/0238-product-of-array-except-self/) | Medium |
 | [0274-h-index](https://github.com/Firedrago95/Algorithm/tree/main/0274-h-index/) | Medium |
 | [0289-game-of-life](https://github.com/Firedrago95/Algorithm/tree/main/0289-game-of-life/) | Medium |
