@@ -18,6 +18,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0049-group-anagrams](https://github.com/Firedrago95/Algorithm/tree/main/0049-group-anagrams/) | Medium |
 | [0054-spiral-matrix](https://github.com/Firedrago95/Algorithm/tree/main/0054-spiral-matrix/) | Medium |
 | [0055-jump-game](https://github.com/Firedrago95/Algorithm/tree/main/0055-jump-game/) | Medium |
+| [0056-merge-intervals](https://github.com/Firedrago95/Algorithm/tree/main/0056-merge-intervals/) | Medium |
 | [0068-text-justification](https://github.com/Firedrago95/Algorithm/tree/main/0068-text-justification/) | Hard |
 | [0073-set-matrix-zeroes](https://github.com/Firedrago95/Algorithm/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/Firedrago95/Algorithm/tree/main/0080-remove-duplicates-from-sorted-array-ii/) | Medium |
@@ -82,6 +83,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- | ------- |
 | [0015-3sum](https://github.com/Firedrago95/Algorithm/tree/main/0015-3sum/) | Medium |
 | [0049-group-anagrams](https://github.com/Firedrago95/Algorithm/tree/main/0049-group-anagrams/) | Medium |
+| [0056-merge-intervals](https://github.com/Firedrago95/Algorithm/tree/main/0056-merge-intervals/) | Medium |
 | [0088-merge-sorted-array](https://github.com/Firedrago95/Algorithm/tree/main/0088-merge-sorted-array/) | Easy |
 | [0169-majority-element](https://github.com/Firedrago95/Algorithm/tree/main/0169-majority-element/) | Easy |
 | [0242-valid-anagram](https://github.com/Firedrago95/Algorithm/tree/main/0242-valid-anagram/) | Easy |
@@ -222,4 +224,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/Firedrago95/Algorithm/tree/main/0128-longest-consecutive-sequence/) | Medium |
+## Quicksort
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0056-merge-intervals](https://github.com/Firedrago95/Algorithm/tree/main/0056-merge-intervals/) | Medium |
 <!---LeetCode Topics End-->
