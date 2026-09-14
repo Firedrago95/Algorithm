@@ -144,6 +144,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0020-valid-parentheses](https://github.com/Firedrago95/Algorithm/tree/main/0020-valid-parentheses/) | Easy |
 | [0042-trapping-rain-water](https://github.com/Firedrago95/Algorithm/tree/main/0042-trapping-rain-water/) | Hard |
 ## Monotonic Stack
 | Problem Name | Difficulty |
@@ -157,6 +158,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0012-integer-to-roman](https://github.com/Firedrago95/Algorithm/tree/main/0012-integer-to-roman/) | Medium |
 | [0013-roman-to-integer](https://github.com/Firedrago95/Algorithm/tree/main/0013-roman-to-integer/) | Easy |
 | [0014-longest-common-prefix](https://github.com/Firedrago95/Algorithm/tree/main/0014-longest-common-prefix/) | Easy |
+| [0020-valid-parentheses](https://github.com/Firedrago95/Algorithm/tree/main/0020-valid-parentheses/) | Easy |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Firedrago95/Algorithm/tree/main/0028-find-the-index-of-the-first-occurrence-in-a-string/) | Easy |
 | [0030-substring-with-concatenation-of-all-words](https://github.com/Firedrago95/Algorithm/tree/main/0030-substring-with-concatenation-of-all-words/) | Hard |
 | [0049-group-anagrams](https://github.com/Firedrago95/Algorithm/tree/main/0049-group-anagrams/) | Medium |
@@ -232,4 +234,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0056-merge-intervals](https://github.com/Firedrago95/Algorithm/tree/main/0056-merge-intervals/) | Medium |
+## Bracket Sequences
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0020-valid-parentheses](https://github.com/Firedrago95/Algorithm/tree/main/0020-valid-parentheses/) | Easy |
 <!---LeetCode Topics End-->
