@@ -146,6 +146,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/Firedrago95/Algorithm/tree/main/0020-valid-parentheses/) | Easy |
 | [0042-trapping-rain-water](https://github.com/Firedrago95/Algorithm/tree/main/0042-trapping-rain-water/) | Hard |
+| [0071-simplify-path](https://github.com/Firedrago95/Algorithm/tree/main/0071-simplify-path/) | Medium |
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -164,6 +165,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0049-group-anagrams](https://github.com/Firedrago95/Algorithm/tree/main/0049-group-anagrams/) | Medium |
 | [0058-length-of-last-word](https://github.com/Firedrago95/Algorithm/tree/main/0058-length-of-last-word/) | Easy |
 | [0068-text-justification](https://github.com/Firedrago95/Algorithm/tree/main/0068-text-justification/) | Hard |
+| [0071-simplify-path](https://github.com/Firedrago95/Algorithm/tree/main/0071-simplify-path/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Firedrago95/Algorithm/tree/main/0076-minimum-window-substring/) | Hard |
 | [0125-valid-palindrome](https://github.com/Firedrago95/Algorithm/tree/main/0125-valid-palindrome/) | Easy |
 | [0151-reverse-words-in-a-string](https://github.com/Firedrago95/Algorithm/tree/main/0151-reverse-words-in-a-string/) | Medium |
